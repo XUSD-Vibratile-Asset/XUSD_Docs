@@ -27,19 +27,18 @@ export const ROUTES = [
       { title: "Overview", href: "/taxoverview" },
       { title: "Taxes", href: "/taxes" },
       { title: "Tax Classes", href: "/classes" },
-      { title: "Assignment of Tax to Users", href: "/assignment" },
-      { title: "Dynamic Tax Modulation", href: "/modulation" },
-      { title: "Community Accountability Governance", href: "/cag" },
+      { title: "Assignment of Tax to Users", href: "/assignment" },   
+ 
       { title: "Dev resources", href: "/taxdev" },
     ],
   },
   {
-    title: "XUSD CreditReport",
+    title: "XUSD LitPass",
     href: "creditreport",
     items: [
-      { title: "Credit Report", href: "/creditreport" },
-      { title: "Utility", href: "/utility" },
-      { title: "How to Obtain", href: "/obtain" },
+      { title: "Identity", href: "/creditreport" },
+      { title: "Power", href: "/utility" },
+      { title: "Control", href: "/obtain" },
       
     ],
   },
