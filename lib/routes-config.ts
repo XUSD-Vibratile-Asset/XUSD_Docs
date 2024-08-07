@@ -15,9 +15,7 @@ export const ROUTES = [
     href: "launch",
     items: [
       { title: "Overview", href: "/launchOverview" },
-      { title: "Genesis", href: "/genesis" },
-      { title: "Bootstrapping", href: "/bootstrapping" },
-      { title: "Operational", href: "/operational" },
+
     ],
   },
   {
@@ -36,9 +34,9 @@ export const ROUTES = [
     title: "XUSD LitPass",
     href: "creditreport",
     items: [
-      { title: "Identity", href: "/creditreport" },
-      { title: "Power", href: "/utility" },
-      { title: "Control", href: "/obtain" },
+      { title: "Overview", href: "/litoverview" },
+
+      { title: "Buy", href: "/obtain" },
       
     ],
   },
