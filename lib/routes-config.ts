@@ -49,6 +49,15 @@ export const ROUTES = [
       
     ],
   }, 
+  {
+    title: "Tg Bots",
+    href: "tgbots",
+    items: [
+      { title: "TG Notifications", href: "/tgbots" },
+  
+      
+    ],
+  }, 
   
 ];
 
