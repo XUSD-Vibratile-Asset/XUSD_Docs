@@ -2,25 +2,30 @@
 title: Dynamic Taxation
 description: Taxes that change over time based on the users interactions on the blockchain
 ---
+### Definition
 
-Dynamic Taxation is a novel approach on the ancient method of taxation that is decentralized and is in the control of the people, and not the government.
-
-## Dynamic? What does that mean and is it fair?
-
-This simply means that the amount you are taxed per transaction will change over time. Its dynamic and not static. 
->If taxes are able to be changed, is this fair for evey user and how is it not a rug?
-
-No it is not fair to all users and **that is the whole point.** Good actors and users should be able to pay less tax then the people who are ceareal ruggers. We all know 
-that tax brackets are a thing and we all know how unfare they can be. The best part is that you get to decide what those taxes will be. This will take some teamwork but 
-I cant imagine it be to long before we have a congress delegated powers to be in charge of the taxes as a true DeFi Republic.    
+Dynamic Taxation refers to a flexible tax system where the tax rate changes based on users' interactions on the blockchain. This approach is decentralized and controlled by the community rather than the government, aligning with the principles of decentralized finance (DeFi).
 
 
+## Concept and Fairness
+### Dynamic Nature:
+The term "dynamic" means that the tax amount per transaction changes over time, rather than remaining static. This flexibility allows the system to adapt to various user behaviors and transaction volumes.
 
-## CAG/DEV 
+**Fairness:**
+The dynamic tax system is not designed to be fair to all users equally. Instead, it aims to reward good actors and penalize bad actors. Users who contribute positively to the ecosystem will pay less tax than those who engage in negative behaviors, such as rug pulling. This creates an incentive structure that promotes positive participation. The community collectively decides tax rates, potentially through a delegated congress in a true DeFi Republic.
 
-There are 2 key roles when it comes to implementing taxes. The first one is the **Dev**.  to create a tax class contract to be added to the tax registry, and the **Community Accountability Governance.**  [Dev Resources](taxdev)
 
-## Two key parts of the Governance
+## Implementation of Dynamic Taxes
+## Roles
+**Developers (Dev):**
+Developers create the tax class contract and add it to the tax registry. They are responsible for the technical implementation of the tax system.
+
+**Community Accountability Governance (CAG):**
+The CAG process involves the community voting on and approving tax classes. This decentralized governance model ensures that tax decisions are made collectively and transparently.
+
+
+
+
 
 
 
@@ -30,42 +35,37 @@ There are 2 key roles when it comes to implementing taxes. The first one is the 
     <TabsTrigger value="ts">  Dev  </TabsTrigger>
   </TabsList>
   <TabsContent value="js">
+### Governance Process
+  ## Voting Mechanism:
  
- **Community Accountability Governance** Is the process in witch a tax class gets voted in and approved to be used in the system. This is a key role that needs to be filled and almost anyone can do it. 
- So lets break down what it is, how it works, and what role does it serve in the scope of the entire ecosystem. 
+ 1.  **LitPass NFT:**
+To participate in governance, users must obtain a LitPass NFT. This grants membership in the society, along with responsibilities, rewards, and a say in the system.
 
-    - **Governance**: 
+2. **Voting Power:**
+Voting power is weighted based on social status, ranging from 1 to 5. This means some users can have a more significant influence on decisions.
 
-Just like most governing bodies decisions made as a group are achieved through a vote. However, the governance here is much different then anything else in DeFi. Our approach aimes to be fair and decentralized and fast, we dont want votes to linger and nothing gets done. 
-This is subject to change as time goes on but we think that this is a great way to achieve our main goal. 
+3. **Majority Vote:**
+A tax class requires a majority vote (51%) to pass. With weighted voting, this ensures a fair yet efficient decision-making process.
 
-- **First**:
+4. **Emergency Powers:**
+Certain users, currently developers, can impose taxes without a vote in urgent situations. This power may eventually be delegated to elected congress members for swift action when needed.
 
-First thing is first, in order to vote you mush obtain your LitPass NFT. more info on litPass here. By holding a LitPass you are now a member of our society. That means you will have more responsabilities then the new people. 
-You will also get more rewards and a say in the entire system that you are a part of. 
-
- - **Second**:
-
-Voting Power. Depending on your social status, you will have a corresponding weight or multiplier on your vote. They range from 1 to 5. So instead of just having one vote, you can have multiple or a larger vote each time. 
-We will discuss how to rank up later but how do we get a vote to pass?
-
-    - **Third**:
-
-For now, you will need a majority vote to pass a tax class. That means there must be 51% of the users to vote on it to make it a reality. If you think that is going to be hard to accomplish, 
-remember that you will have the ability to make your vote worth 5 votes. Those 5 votes are equivalent to 5 individual votes. We think that this style of voting should allow for a general concensus on the proposed tax class while also 
-giving the process a boost so that the governance process isnt painfull or long. The key to us reaching and maintaining peg is through teamwork and active participation, so please its to your own advantage that you actively participate in the CAG.
- 
-    - **Last**:
-
-There will be people who are able to whip the group into concensus and are able to apply the tax ultimatly skipping the vote. This is necessesary in case time if crucial and also for things that would ordinarily incure a new tax class. Like a new token farm openining, It is assumed that individual would tag on a negative basis fee 
-for those who participate in the farming. For now only the dev can do this, but in the future our elected congress will hold the delegated powers to make the changes swiftly.
-
-Now why do we even want to do this? Ill keep this short, there will be a strategy secion later. If a known address is constantly ruggin launches, wouldnt it be sweet to hit em with an 80% tax?   
- 
   </TabsContent>
   <TabsContent value="ts">
-  The second part of the governance is develping the taxes and logit that will be used. There are very few limits on what you can do to determin who and how much an individual can be taxed. There will be a base contract that you can build off of, 
-  but the importaint thing is that you complete 2 functions, one for addition and the other for subtraction. The also mush return a boolean, so it knows to add the tax or not to the current user. Bellow is a simple look at them but a full repo will be available rout you tu use!
+ ## Developing Dynamic Taxation Logic
+The second part of governance involves developing the taxes and logic that will be applied to transactions. This process is highly flexible, allowing for innovative and tailored tax strategies. Here’s an overview of the development process and the necessary functions:
+
+## Tax Development Overview
+**Flexibility:**
+There are few limitations on how you can determine who and how much an individual can be taxed. This flexibility allows developers to create sophisticated and nuanced tax mechanisms that can adapt to various scenarios and user behaviors.
+
+**Base Contract:**
+A base contract will be provided as a foundation. Developers can build upon this base to create customized tax logic. The key requirement is to implement two essential functions: one for addition and one for subtraction.
+
+**Essential Functions**
+To integrate with the dynamic tax system, your contract must include two primary functions: getActiveAdd and getActiveSub. These functions will determine whether to apply the tax to a user based on the transaction context and return a boolean indicating the decision.
+
+
 ```solidity 
     constructor(int _classBasis, uint _classType, string memory _note)  {
         classBasis = _classBasis;
@@ -95,8 +95,13 @@ Now why do we even want to do this? Ill keep this short, there will be a strateg
   </TabsContent>
 </Tabs>
 
+### Taxation Strategy
+## Dynamic Taxation Goals:
+The primary goal of dynamic taxation is to maintain the stability and peg of the Vibratile token. By taxing bad actors heavily (up to 80%) and burning over 70% of all collected taxes, the system can reduce token supply and help regain the target price.
 
-## Burn Baby Burn!
+## Burning Mechanism:
+Burning tokens immediately reduces the circulating supply, contributing to the contraction mechanism described earlier. This system allows for endless possibilities, encouraging community contributions to devise new ways to enhance the model and achieve the desired economic outcomes.
 
-Over 70% of all taxes are burned imidiately. With this system in place, the possabilities are trully endlesess. And you are encouraged to contribute 
-to come up with anything that fits this model and the more we contribute the more we burn and the closer we get to regaining peg. 
+## Conclusion
+Dynamic Taxation is a crucial component of the Vibratile token ecosystem, ensuring that the system remains adaptive, fair, and community-driven. By leveraging the collective power of the community and innovative tax mechanisms, Vibratile tokens like XUSD can achieve stability and growth in the decentralized finance space.
+
