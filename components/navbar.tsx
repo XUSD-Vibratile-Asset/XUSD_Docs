@@ -1,6 +1,7 @@
 import { ModeToggle } from "@/components/theme-toggle";
 import { GithubIcon, TwitterIcon, HexagonIcon } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { buttonVariants } from "./ui/button";
 import Search from "./search";
 import Anchor from "./anchor";
@@ -67,7 +68,7 @@ export function Navbar() {
 export function Logo() {
   return (
     <Link href="/" className="flex items-center gap-2.5">
-      <HexagonIcon className="w-7 h-7 text-muted-foreground fill-current" />
+      <Image src={"/logo.png"} width={60} height={60} alt="mooo"></Image>
       <h2 className="text-md font-bold">XUSD Docs</h2>
     </Link>
   );
