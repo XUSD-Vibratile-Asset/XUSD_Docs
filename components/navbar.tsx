@@ -41,7 +41,7 @@ export function Navbar() {
             <Search />
             <div className="flex">
               <Link
-                href="https://github.com/nisabmohd/Docs-Stater-Template"
+                href="https://github.com/surfacing8671/DBURN"
                 className={buttonVariants({ variant: "ghost", size: "icon" })}
               >
                 <GithubIcon className="h-[1.1rem] w-[1.1rem]" />
