@@ -41,6 +41,16 @@ export const ROUTES = [
     ],
   },
   {
+    title: "When Over Peg",
+    href: "peg",
+    items: [
+      { title: "Peg Control", href: "/pegcontrol" },
+
+      { title: "Buy", href: "/obtain" },
+      
+    ],
+  },
+  {
     title: "Kings",
     href: "kings",
     items: [
