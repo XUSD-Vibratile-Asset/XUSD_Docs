@@ -46,19 +46,19 @@ export const ROUTES = [
     items: [
       { title: "Peg Control", href: "/pegcontrol" },
 
-      { title: "Buy", href: "/obtain" },
+
       
     ],
   },
-  {
-    title: "Kings",
-    href: "kings",
-    items: [
-      { title: "Are you worthy?", href: "/startking" },
-      { title: "Seigniorage", href: "/seigniorage" },
+  // {
+  //   title: "Kings",
+  //   href: "kings",
+  //   items: [
+  //     { title: "Are you worthy?", href: "/startking" },
+  //     { title: "Seigniorage", href: "/seigniorage" },
       
-    ],
-  }, 
+  //   ],
+  // }, 
   {
     title: "Tg Bots",
     href: "tgbots",
