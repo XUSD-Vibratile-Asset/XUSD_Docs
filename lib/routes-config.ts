@@ -25,7 +25,7 @@ export const ROUTES = [
       { title: "Overview", href: "/vibeoverview" },
       { title: "Vibes", href: "/vibes" },
       { title: "Vibe Classes", href: "/classes" },
-      { title: "Assignment of Tax to Users", href: "/assignment" },   
+      { title: "Vibes man", href: "/assignment" },   
  
       { title: "Dev resources", href: "/taxdev" },
     ],
