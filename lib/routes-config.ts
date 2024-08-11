@@ -19,12 +19,12 @@ export const ROUTES = [
     ],
   },
   {
-    title: "Dynamic Taxation",
-    href: "dynamicTax",
+    title: "Dynamic Vibratile Credit",
+    href: "dynamicVibe",
     items: [
-      { title: "Overview", href: "/taxoverview" },
-      { title: "Taxes", href: "/taxes" },
-      { title: "Tax Classes", href: "/classes" },
+      { title: "Overview", href: "/vibeoverview" },
+      { title: "Vibes", href: "/vibes" },
+      { title: "Vibe Classes", href: "/classes" },
       { title: "Assignment of Tax to Users", href: "/assignment" },   
  
       { title: "Dev resources", href: "/taxdev" },

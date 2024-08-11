@@ -1,0 +1,107 @@
+---
+title: Dynamic Vibratile Credits
+description: Vibratile credits that change over time based on the users interactions on the blockchain
+---
+### Definition
+
+Dynamic Vibratiel Credits refers to a flexible system where the Vibratile Credits changes based on users interactions on the blockchain. This approach is decentralized and controlled by the community rather than the government, aligning with the principles of decentralized finance (DeFi).
+
+
+## Concept and Fairness
+### Dynamic Nature:
+The term "dynamic" means that the Vibratiel Credits per transaction changes over time, rather than remaining static. This flexibility allows the system to adapt to various user behaviors and transaction volumes.
+
+**Fairness:**
+The Dynamic Vibratile Credits system is not designed to be fair to all users equally. Instead, it aims to reward good actors with "good vibes" and penalize bad actors with "bad vibes". Users who contribute positively to the ecosystem will be credited good vibes while those who engage in negative behaviors, such as rug pulling, will be credited with negative vibes. This creates an incentive structure that promotes positive participation. The community collectively decides who gets good vibes and who gets bad vibes, potentially through a delegated congress in a true DeFi Republic.
+
+
+## Implementation of Dynamic Vibratile Credites
+## Roles
+**Developers (Dev):**
+Developers create the Vibratile Credit class contract and add it to the Vibratile Credit registry. They are responsible for the technical implementation of the Vibratile Credit system.
+
+**Community Accountability Governance (CAG):**
+The CAG process involves the community voting on and approving Vibratile Credit classes. This decentralized governance model ensures that Vibratile Credit decisions are made collectively and transparently.
+
+
+
+
+
+
+
+<Tabs defaultValue="js" className="pt-5 pb-1">
+  <TabsList className="">
+    <TabsTrigger value="js">  CAG  </TabsTrigger>
+    <TabsTrigger value="ts">  Dev  </TabsTrigger>
+  </TabsList>
+  <TabsContent value="js">
+### Governance Process
+  ## Voting Mechanism:
+ 
+ 1.  **LitPass NFT:**
+To participate in governance, users must obtain a LitPass NFT. This grants membership in the society, along with responsibilities, rewards, and a say in the system.
+
+2. **Voting Power:**
+Voting power is weighted based on social status, ranging from 1 to 5. This means some users can have a more significant influence on decisions.
+
+3. **Majority Vote:**
+A Vibratile Credit class requires a majority vote (51%) to pass. With weighted voting, this ensures a fair yet efficient decision-making process.
+
+4. **Emergency Powers:**
+Certain users, currently developers, can impose Vibratile Credites without a vote in urgent situations. This power may eventually be delegated to elected congress members for swift action when needed.
+
+  </TabsContent>
+  <TabsContent value="ts">
+ ## Developing Dynamic Vibratile Creditation Logic
+The second part of governance involves developing the Vibratile Credites and logic that will be applied to transactions. This process is highly flexible, allowing for innovative and tailored Vibratile Credit strategies. Here’s an overview of the development process and the necessary functions:
+
+## Vibratile Credit Development Overview
+**Flexibility:**
+There are few limitations on how you can determine who and how much an individual can be Vibratile Credited. This flexibility allows developers to create sophisticated and nuanced Vibratile Credit mechanisms that can adapt to various scenarios and user behaviors.
+
+**Base Contract:**
+A base contract will be provided as a foundation. Developers can build upon this base to create customized Vibratile Credit logic. The key requirement is to implement two essential functions: one for addition and one for subtraction.
+
+**Essential Functions**
+To integrate with the dynamic Vibratile Credit system, your contract must include two primary functions: getActiveAdd and getActiveSub. These functions will determine whether to apply the Vibratile Credit to a user based on the transaction context and return a boolean indicating the decision.
+
+
+```solidity 
+    constructor(int _classBasis, uint _classType, string memory _note)  {
+        classBasis = _classBasis;
+        classType = _classType;
+        note = _note;
+     
+    }
+
+    function getActiveAdd(
+        address user,
+        address to,
+        address from,
+        address sender,
+       
+        uint amount
+    ) external virtual onlyRegistry returns (bool) {return false;}
+
+    function getActiveSub(
+        address user,
+        address to,
+        address from,
+        address sender,
+     
+        uint amount
+    ) external virtual onlyRegistry returns (bool) {return false;}
+```
+  </TabsContent>
+</Tabs>
+
+### Vibratile Creditation Strategy
+## Dynamic Vibratile Creditation Goals:
+The primary goal of dynamic Vibratile Creditation is to maintain the stability and peg of the Vibratile token. By Vibratile Crediting bad actors heavily (up to 80%) and burning over 70% of all collected Vibratile Credites, the system can reduce token supply and help regain the target price.
+
+## Burning Mechanism:
+Burning tokens immediately reduces the circulating supply, contributing to the contraction mechanism described earlier. This system allows for endless possibilities, encouraging community contributions to devise new ways to enhance the model and achieve the desired economic outcomes.
+
+## Conclusion
+Dynamic Vibratile Creditation is a crucial component of the Vibratile token ecosystem, ensuring that the system remains adaptive, fair, and community-driven. By leveraging the collective power of the community and innovative Vibratile Credit mechanisms, Vibratile tokens like XUSD can achieve stability and growth in the decentralized finance space.
+
