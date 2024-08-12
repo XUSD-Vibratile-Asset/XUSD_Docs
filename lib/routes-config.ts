@@ -25,9 +25,9 @@ export const ROUTES = [
       { title: "Overview", href: "/vibeoverview" },
       { title: "Vibes", href: "/vibes" },
       { title: "Vibe Classes", href: "/classes" },
-      { title: "Vibes man", href: "/assignment" },   
+      { title: "Manual", href: "/manual" },   
  
-      { title: "Dev resources", href: "/taxdev" },
+      { title: "Dev Resources", href: "/vibedev" },
     ],
   },
   {
@@ -60,10 +60,10 @@ export const ROUTES = [
   //   ],
   // }, 
   {
-    title: "Tg Bots",
+    title: "Telegram Bots",
     href: "tgbots",
     items: [
-      { title: "TG Notifications", href: "/tgbots" },
+      { title: "Telegram Notifications", href: "/tgbots" },
   
       
     ],
