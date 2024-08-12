@@ -1,4 +1,4 @@
-// File: /home/surfacing8671/docsXusd/app/docs/[[...slug]]/page.tsx
+// File: /workspaces/docsXusd/app/docs/[[...slug]]/page.tsx
 import * as entry from '../../../../../app/docs/[[...slug]]/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
