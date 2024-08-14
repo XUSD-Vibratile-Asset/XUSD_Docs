@@ -1,4 +1,4 @@
-// File: /workspaces/docsXusd/app/docs/[[...slug]]/layout.tsx
+// File: /home/surfacing8671/Desktop/XUSD_Docs/app/docs/[[...slug]]/layout.tsx
 import * as entry from '../../../../../app/docs/[[...slug]]/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

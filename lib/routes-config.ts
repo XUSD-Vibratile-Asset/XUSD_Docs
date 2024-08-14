@@ -50,6 +50,17 @@ export const ROUTES = [
       
     ],
   },
+
+  {
+    title: "Community Contribution",
+    href: "community",
+    items: [
+      { title: "Community Rewards", href: "/communityrewards" },
+
+
+      
+    ],
+  },
   // {
   //   title: "Kings",
   //   href: "kings",
