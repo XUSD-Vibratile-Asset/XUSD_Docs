@@ -15,7 +15,7 @@ export const ROUTES = [
     href: "launch",
     items: [
       { title: "Overview", href: "/launchOverview" },
-
+      { title: "Genesis", href: "/genesis" },
     ],
   },
   {
