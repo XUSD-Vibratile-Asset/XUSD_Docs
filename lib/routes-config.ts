@@ -15,7 +15,7 @@ export const ROUTES = [
     href: "launch",
     items: [
       { title: "Overview", href: "/launchOverview" },
-
+      { title: "Genesis", href: "/genesis" },
     ],
   },
   {
@@ -61,6 +61,18 @@ export const ROUTES = [
       
     ],
   },
+  // {
+  //   title: "Developer Resources",
+  //   href: "devbook",
+  //   items: [
+  //     { title: "Vibe Regestry", href: "/VibeRegistry" },
+  //     { title: "Vibe Pass", href: "/vibepass" },
+
+  //     { title: "XUSD", href: "/XUSD" },
+
+      
+  //   ],
+  // },
   // {
   //   title: "Kings",
   //   href: "kings",

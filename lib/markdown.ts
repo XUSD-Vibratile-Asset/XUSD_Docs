@@ -8,6 +8,11 @@ import rehypeSlug from "rehype-slug";
 import rehypeCodeTitles from "rehype-code-titles";
 import { page_routes } from "./routes-config";
 import { visit } from "unist-util-visit";
+import { readFile } from 'node:fs/promises'
+
+import { compile } from '@mdx-js/mdx'
+import remarkMdxImages from 'remark-mdx-images'
+
 
 // custom components imports
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";

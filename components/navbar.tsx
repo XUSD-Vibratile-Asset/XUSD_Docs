@@ -1,5 +1,5 @@
 import { ModeToggle } from "@/components/theme-toggle";
-import { GithubIcon, TwitterIcon, HexagonIcon } from "lucide-react";
+import { GithubIcon, TwitterIcon, HexagonIcon, Send } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { buttonVariants } from "./ui/button";
@@ -54,7 +54,7 @@ export function Navbar() {
                   size: "icon",
                 })}
               >
-                <TwitterIcon className="h-[1.1rem] w-[1.1rem]" />
+                <Send className="h-[1.1rem] w-[1.1rem]" />
               </Link>
               <ModeToggle />
             </div>

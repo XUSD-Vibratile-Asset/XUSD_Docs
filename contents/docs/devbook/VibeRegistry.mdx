@@ -1,0 +1,218 @@
+# VibeRegistry
+
+
+
+> VibeRegistry
+
+
+
+*Manages Dynamic Vibes and storage for its classes.*
+
+## Methods
+
+### addClass
+
+```solidity
+function addClass(address class, bool active, uint256 classType, bool _process) external nonpayable
+```
+
+Adds a new class to the appropriate registry
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| class | address | The address of the class to be added |
+| active | bool | The active status of the class |
+| classType | uint256 | The type of class (0: To, 1: From, 2: Caller, 3: Contract) |
+| _process | bool | A boolean indicating if the process is ongoing |
+
+### calculateAndSumBasis
+
+```solidity
+function calculateAndSumBasis(address to, address from, address _caller, address sender, uint256 amount) external nonpayable returns (int256, uint256)
+```
+
+Calculates and sums the basis points for a transaction
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| to | address | The address of the recipient |
+| from | address | The address of the sender |
+| _caller | address | The address of the caller |
+| sender | address | undefined |
+| amount | uint256 | The transaction amount |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | int256 | The total basis points summed from the transaction |
+| _1 | uint256 | undefined |
+
+### checkRank
+
+```solidity
+function checkRank(address user) external nonpayable
+```
+
+Checks and assigns the rank of the user based on their vibe score
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| user | address | The address of the user |
+
+### setDenominator
+
+```solidity
+function setDenominator(uint256 _denominator) external nonpayable
+```
+
+
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| _denominator | uint256 | undefined |
+
+### setGov
+
+```solidity
+function setGov(address gove) external nonpayable
+```
+
+Assigns the CONSUL rank to the given address
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| gove | address | The address to assign the CONSUL rank to |
+
+### showRewards
+
+```solidity
+function showRewards() external view returns (struct VibeRegistry.RewardClass[])
+```
+
+Returns the reward classes in the registry
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | VibeRegistry.RewardClass[] | _rewards An array of RewardClass representing the rewards |
+
+### showVibes
+
+```solidity
+function showVibes() external view returns (struct VibeRegistry.MaterClass[][3])
+```
+
+Returns the active vibe classes in the registry
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | VibeRegistry.MaterClass[][3] | _vibes A 2D array representing the vibes for To, From, and Caller classes |
+
+### viewUser
+
+```solidity
+function viewUser(address user) external view returns (int256)
+```
+
+Returns the vibe score of a given user
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| user | address | The address of the user |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | int256 | The vibe score of the user |
+
+### viewVibes
+
+```solidity
+function viewVibes(address user) external view returns (int256)
+```
+
+Returns the vibe score of a given user
+
+
+
+#### Parameters
+
+| Name | Type | Description |
+|---|---|---|
+| user | address | The address of the user |
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | int256 | The vibe score of the user |
+
+### xusd
+
+```solidity
+function xusd() external view returns (contract XUSD)
+```
+
+
+
+
+
+
+#### Returns
+
+| Name | Type | Description |
+|---|---|---|
+| _0 | contract XUSD | undefined |
+
+
+
+
+## Errors
+
+### NotAllowedAccess
+
+```solidity
+error NotAllowedAccess()
+```
+
+
+
+
+
+
+
