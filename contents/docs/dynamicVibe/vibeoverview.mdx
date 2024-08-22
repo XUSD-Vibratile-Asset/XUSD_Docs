@@ -60,38 +60,154 @@ The second part of governance involves developing the Vibratile Credits and Vibe
 There are few limitations on how you can determine who and how much an individual can be credited or penalized with Vibratile Credits which depends on the individual's actions which vary between Good and Bad Vibes. This flexibility allows developers to create sophisticated and nuanced Vibratile Credit mechanisms that can adapt to various scenarios and user's behavior.
 
 **Base Contract:**
-A Base Contract will be provided as a foundation. Developers can build upon this base to create customized Vibratile Credit Logic. The key requirement is to implement two essential functions: one for addition and one for subtraction.
+A Base Contract will be provided as a foundation. Developers can build upon this base to create customized Vibratile Credit Logic. The key requirement is to implement two essential functions. The one returns the class description.
+The other is also simple. It takes perameters of and address and amount. This represents an address in the trade (From, To, Caller, or Sender) and the trade ammount. What you do with this info is up to you but you must return a vibe to be charged to the user and the amount that you did not use in the transaction.
+You must return an amount less then the original transaction amount, and at least 1/4 of the original amount of the trade. This will allow you to create additional rewards, liquidity additions, as long as it meets those requirements. 
 
-**Essential Functions**
-To integrate with the Dynamic Vibratile Credit System, your contract must include two primary functions: getActiveAdd and getActiveSub. These functions will determine whether to apply the Vibratile Credit to a user based on the transaction context and return a boolean indicating the decision.
-
+**Essential Base Class**
+To integrate with the Dynamic Vibratile Credit System, your contract must inharet the BaseClass contract. Apon completion we will test out the contract before pushing it live if voted in. 
 
 ```solidity 
-    constructor(int _classBasis, uint _classType, string memory _note)  {
-        classBasis = _classBasis;
-        classType = _classType;
-        note = _note;
-     
+// SPDX-License-Identifier: Sharia
+  pragma solidity ^0.8.26;
+
+import "./IVibeCalculator.sol";
+
+/**
+ * @title BaseClass
+ * @dev This is an abstract base class contract that includes basic functionalities for user activation and class basis management.
+ */
+abstract contract VibeBase is IVibeCalculator {
+   
+
+    string public description;
+
+    struct VibeInfo {
+        address creatorAddress;
+        string info;
     }
 
-    function getActiveAdd(
-        address user,
-        address to,
-        address from,
-        address sender,
-       
-        uint amount
-    ) external virtual onlyRegistry returns (bool) {return false;}
+    constructor(string memory _note) {
+        description = _note;
+    }   
 
-    function getActiveSub(
-        address user,
+    function getDescription() external view returns (string memory) {
+        return description;
+    }
+
+    function calculateTotalBasisFee(
+        address addy,
+        uint amount
+    ) external virtual nonReentrant returns (int, uint) {}
+}
+
+```
+
+
+Here is a full example of a vibe class. This one randomly generates a vibe. 
+
+```solidity
+// SPDX-License-Identifier: Sharia
+pragma solidity ^0.8.26;
+
+import "./IVibeCalculator.sol";
+import "./VibeBase.sol";
+/**
+ * @title RandomizedVibeCalculator
+ * @dev A vibe calculator that applies a random vibe rate within a specified range.
+ */
+contract RandomizedVibeCalculator is VibeBase {
+    int public immutable minRateBasisPoints;
+    int public immutable maxRateBasisPoints;
+    string public Description;
+    /**
+     * @dev Constructor to set the range for the random vibe rate.
+     * @param _minRateBasisPoints The minimum vibe rate in basis points.
+     * @param _maxRateBasisPoints The maximum vibe rate in basis points.
+     */
+    constructor(int _minRateBasisPoints, int _maxRateBasisPoints, string memory _description
+    )  VibeBase(_description) {
+        require(_minRateBasisPoints <= _maxRateBasisPoints, "Min rate must be <= max rate");
+        minRateBasisPoints = _minRateBasisPoints;
+        maxRateBasisPoints = _maxRateBasisPoints;
+    }
+
+    function calculateTotalBasisFee(address addy, uint amount) external view override returns (int, uint) {
+        uint256 random = uint256(keccak256(abi.encodePacked(block.timestamp, addy, amount))) % (uint256(maxRateBasisPoints) - uint256(minRateBasisPoints) + 1);
+        return (minRateBasisPoints + int(random), amount);
+    }
+}
+
+```
+
+## Vibe Registry
+The vibe classes are all stored inside of the vibe Registry contract. That is the main logic hub behind the dynamic vibe system. To keep things simple, a transaction, either transfer or transferFrom has on normal a few addresses that are included in the transaction.
+We break them down like this, to, from, caller (tx.origin), and sender (msg.sender) as well as the amount being transfered. You get to decide witch address your vibes will be associated or triggered on. For rewarding LP traders we will use the to and from addresses because that is where the token will be transfering to and from durring a normal trade. 
+Now there are also 2 other conditions, an active (is it activated), and a process condition that you need to keep in mind. The process simple means that the class will be reprocessed on every transaction, whereass normaly it triggers once and is saved to the address. This helps save on gas. But if it needs to be ran everytime like lets say you are checking for holding or balances. 
+
+Here is the main function of the Regestry contract that calculates the vibes per user on a transaction. There is also a bonus rewards modul as well.
+
+``` solidity
+
+  function calculateAndSumBasis(
         address to,
         address from,
+        address _caller,
         address sender,
-     
         uint amount
-    ) external virtual onlyRegistry returns (bool) {return false;}
-```
+    ) external nonReentrant returns (int, uint) {
+        if (!UserProfileRepo.Contains(to)) addProfile(to);
+        if (!UserProfileRepo.Contains(from)) addProfile(from);
+        if (!UserProfileRepo.Contains(_caller)) addProfile(_caller);
+        if (!UserProfileRepo.Contains(sender)) addProfile(sender);
+        userProfile storage toUser = usersVibesFile[to];
+        userProfile storage fromUser = usersVibesFile[from];
+        userProfile storage callerUser = usersVibesFile[_caller];
+        userProfile storage senderUser = usersVibesFile[sender];
+
+        int sumVibes = 0;
+        int vibe = 0;
+
+        (vibe, amount) = calculateVibesForAddress(
+            senderUser,
+            senderVibe,
+            MasterClassSenderRegistry,
+            MasterClassSenderMap,
+            amount
+        );
+        sumVibes += vibe;
+        // Calculate vibes for 'to' address
+        (vibe, amount) = calculateVibesForAddress(
+            toUser,
+            toVibe,
+            MasterClassToRegistry,
+            MasterClassToMap,
+            amount
+        );
+        sumVibes += vibe;
+        // Calculate vibes for 'from' address
+        (vibe, amount) = calculateVibesForAddress(
+            fromUser,
+            fromVibe,
+            MasterClassFromRegistry,
+            MasterClassFromMap,
+            amount
+        );
+        sumVibes += vibe;
+        // Calculate vibes for 'caller' address
+        (vibe, amount) = calculateVibesForAddress(
+            callerUser,
+            callerVibe,
+            MasterClassCallerRegistry,
+            MasterClassCallerMap,
+            amount
+        );
+        sumVibes += vibe;
+        // Calculate rewards based on summed vibes
+        calculateRewards(to, from, _caller, sender, amount, sumVibes);
+        ```
+
+        As you can now tell, this system is robust and very modular. This will allow for a community to run itself and have a constant way of burning the main token. 
   </TabsContent>
 </Tabs>
 
