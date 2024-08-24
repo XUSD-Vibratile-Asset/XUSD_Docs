@@ -31,7 +31,7 @@ export const ROUTES = [
     ],
   },
   {
-    title: "XUSD LitPass",
+    title: "XUSD VibePass",
     href: "creditreport",
     items: [
       { title: "Overview", href: "/litoverview" },

@@ -68,7 +68,7 @@ export function Navbar() {
 export function Logo() {
   return (
     <Link href="/" className="flex items-center gap-2.5">
-      <Image src={"/logo.png"} width={60} height={60} alt="mooo"></Image>
+      <Image src={"/newLogo.png"} width={60} height={60} alt="mooo"></Image>
       <h2 className="text-md font-bold">XUSD Docs</h2>
     </Link>
   );
