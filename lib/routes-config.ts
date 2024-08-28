@@ -51,6 +51,18 @@ export const ROUTES = [
     ],
   },
 
+
+  {
+    title: "Praetorship",
+    href: "praetorship",
+    items: [
+      { title: "Praetorshipl", href: "/praetorship" },
+
+
+      
+    ],
+  },
+
   {
     title: "Community Contribution",
     href: "community",

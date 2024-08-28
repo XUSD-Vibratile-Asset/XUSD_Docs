@@ -1,0 +1,50 @@
+---
+title: Praetorship
+
+description:  XUSD Access Control 
+---
+
+We have an access control system in place which is on the contract level granting users permissions to use additional functions. 
+While the first levels are relatively easy to obtain, the more higher ones are more team-based with permissions that are generally moreover security based. 
+
+  ```solidity {7} showLineNumbers
+    enum Rank {
+        PRINCEPS,         // 0
+        GLADIATOR,        // 1
+        LEGATUS,          // 2
+        SENATOR,          // 3
+        CONSUL,           // 4
+        PRAETORMAXIMUS    // 5 (Highest rank)
+    }
+````
+## PRINCEPS
+Base level user everyone starts here.
+## GLADIATOR
+This is the level that most will find themselves in. It is necessary to have this rank to purchase a VibePass, and really, it is there to show more of the general activity. To achieve this rank, you will need a Vibe of 800 or less. 
+## LEGATUS
+This rank is reserved for community leaders. You must already be a community leader at the time of Genesis and we will manually add you. There is however, a way to obtain this with your on-chain data. 
+This rank will give you more control on the contracts. This is a trusted position, so it is encouraged to hold them accountable. During Genesis, they will hold the ability to add LP tokens to the list of rewarded LP trades. 
+## SENATOR
+This will be the highest position obtainable. You also must be elected to this position. Users who are SENATOR will have the delegated ability to make swift changes such as including the ability to enable or disable Vibes without the need for a vote. They will need 
+at least 2 or 3 SENATOR signatures for the change to go through however. This rank will most likely come into existence near the end of bootstrapping. 
+## CONSUL 
+This rank is reserved for the contracts in the system.   
+## PREATORMAXIMUS
+This is the Dev Multisig deployer wallet. This role is in no way meant to be a supreme controler, this is more for a developmental access to contracts. Once bootstrapping is over, we will have the abilitie to revoke these permissions.
+It's more here for setup and for safety, while the protocol is still new. 
+
+
+## Vibe Votes
+Each rank will have a different weight when it comes to voting. This is to keep in-line with a republic. As we get larger, it is better to delegate our votes to elected officials so we mimic that here with the rank weights.
+PRINCEPS = 0
+GLADIATOR = 1
+LEGATUS = 2
+SENATOR = 3
+PRAETORMAXIMUS = 5 
+
+Even though the higest ranks can just make the Vibe happen, it is not encouraged to do so. Those are for times of emergency.
+You can gain these ranks, but you will still need a VibePass to vote and collect on siegniorage. 
+
+
+
+
