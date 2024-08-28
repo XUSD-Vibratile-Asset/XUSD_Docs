@@ -55,7 +55,7 @@ export const ROUTES = [
     title: "Praetorship",
     href: "praetorship",
     items: [
-      { title: "Peg Control", href: "/pegcontrol" },
+      { title: "Praetorshipl", href: "/praetorship" },
 
 
       
