@@ -58,7 +58,7 @@ export async function getTocs(slug: string) {
   const contentPath = getContentPath(slug);
   const rawMdx = await fs.readFile(contentPath, "utf-8");
   // captures between ## - #### can modify accordingly
-  const headingsRegex = /^(#{2,4})\s(.+)$/gm;
+  const headingsRegex = /^(#{1,4})\s(.+)$/gm;
   let match;
   const extractedHeadings = [];
   while ((match = headingsRegex.exec(rawMdx)) !== null) {
