@@ -21,7 +21,13 @@ The CONSUL rank is reserved for the contracts in the system. This rank controls 
 The PRAETORMAXIMUS is the Dev MultiSig deployer wallet. This role is in no way, meant to be a supreme controller. This is more for a developmental-type access to contracts. Once Bootstrapping is over, we will have the ability to revoke these permissions.
 It is more here for setup, and for safety. All while the protocol is still new. 
 
-## XUSD Access Control 
+## XUSD Access Control System (ACS)
+
+We have an Access Control System in place, which is on the contract level. This system grants users permissions, which allows them to use additional functions. 
+While the first levels are relatively easy to obtain, the more higher ones are more team-based with permissions that are generally moreover security-based. 
+
+Even though the higest ranks can just make the Vibe happen, it is not encouraged to do so. Those are for times of emergency.
+You can gain these ranks, but you will still need a VibePass to vote, and collect on siegniorage. The system goes as:
 
   ```solidity {7} showLineNumbers
     enum Rank {
@@ -34,11 +40,7 @@ It is more here for setup, and for safety. All while the protocol is still new.
     }
 ````
 
-We have an access control system in place, which is on the contract level. This system grants users permissions, which allows them to use additional functions. 
-While the first levels are relatively easy to obtain, the more higher ones are more team-based with permissions that are generally moreover security-based. 
 
-Even though the higest ranks can just make the Vibe happen, it is not encouraged to do so. Those are for times of emergency.
-You can gain these ranks, but you will still need a VibePass to vote, and collect on siegniorage. 
 
 
 
