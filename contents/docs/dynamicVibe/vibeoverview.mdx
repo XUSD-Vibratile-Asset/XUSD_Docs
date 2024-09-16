@@ -1,24 +1,24 @@
 ---
 title: Dynamic Vibratile Credits
-description: Vibratile Credits that change over time based, on the users interactions on the blockchain
+description: Vibratile Credits that change over time, based on the users interactions on the blockchain
 ---
 ### Definition
 
-Dynamic Vibratile Credits refers to a flexible system, where the Vibratile Credits changes based on users interactions on the blockchain. This approach is decentralized and controlled by the community rather than the government, aligning with the principles of decentralized finance (DeFi).
+The Dynamic Vibratile Credits refer to a flexible system, where the Vibratile Credits change, based on users interactions on the blockchain. This approach is decentralized, and controlled by the community, rather than the government. This therefore allows XUSD to be directly aligned with the principles of decentralized finance (DeFi).
 
 
 ## Concept and Fairness
 ### Dynamic Nature:
-The term "dynamic" means that the Vibratile Credits per transaction changes over time, rather than remaining static. This flexibility allows the system to adapt to various user behaviors and transaction volumes.
+The term "dynamic" means that the Vibratile Credits per transaction change over time, rather than remaining static. This flexibility allows the system to adapt to various user behaviors, and transaction volumes.
 
 **Fairness:**
-The Dynamic Vibratile Credits system is not designed to be fair to all users equally. Instead, it aims to reward good actors with Good Vibes and penalize bad actors with Bad Vibes. Users who contribute positively to the ecosystem will be credited Good Vibes while those who engage in negative behaviors, such as rug pulling, will be credited with Bad Vibes. This creates an incentive structure that promotes positive participation. The community collectively decides who gets Good Vibes and who gets Bad Vibes, potentially through a delegated Congress in a true DeFi Republic.
+The Dynamic Vibratile Credits system is not designed to be fair to all users equally. Instead, it aims to reward Good Actors with Good Vibes, and penalize Bad Actors with Bad Vibes. Users who contribute positively to the ecosystem will be credited Good Vibes, while those who engage in negative behaviors, such as rugpulling, will be credited with Bad Vibes. This creates an incentive structure, a structure that only promotes positive participation. The community collectively decides who gets Good Vibes and who gets Bad Vibes, potentially through a delegated Congress in a true DeFi Republic.
 
 
 ## Implementation of Dynamic Vibratile Credits
 ## Roles
 **Developers (Dev):**
-Developers create the Vibratile Credit Class Contract and add it to the Vibratile Credit Registry. They are responsible for the technical implementation of the Vibratile Credit System.
+Developers create the Vibratile Credit Class Contract and add it to the Vibratile Credit Registry. They are responsible for the technical implementation of the entire Vibratile Credit System.
 
 **Community Accountability Governance (CAG):**
 The CAG process involves the community voting on and approving Vibratile Credit Classes. This decentralized governance model ensures that Vibratile Credit decisions are made collectively and transparently.
@@ -42,10 +42,10 @@ The CAG process involves the community voting on and approving Vibratile Credit 
 To participate in governance, users must obtain a VibePass NFT. This grants membership in the society, along with responsibilities, rewards, and a say in the system.
 
 2. **Voting Power:**
-Voting power is weighted based on social status, ranging from 1 to 5. This means some users can have a more significant influence on decisions.
+Voting power is weighted, based on social status. This ranges from 1 to 5. This means some users can have a more significant influence on decisions.
 
 3. **Majority Vote:**
-A Vibratile Credit class requires a majority vote (51%) to pass. With weighted voting, this ensures a fair yet efficient decision-making process.
+A Vibratile Credit class requires a majority vote (51%) to pass. With weighted voting, this ensures a fair, yet efficient way of a decision-making process.
 
 4. **Emergency Powers:**
 Certain users, currently developers, can impose Vibratile Credits without a vote in urgent situations. This power may eventually be delegated to elected Congress members for swift action when needed.
@@ -57,15 +57,15 @@ The second part of governance involves developing the Vibratile Credits and Vibe
 
 ## Vibratile Credit Development Overview
 **Flexibility:**
-There are few limitations on how you can determine who and how much an individual can be credited or penalized with Vibratile Credits which depends on the individual's actions which vary between Good and Bad Vibes. This flexibility allows developers to create sophisticated and nuanced Vibratile Credit mechanisms that can adapt to various scenarios and user's behavior.
+There are few limitations on how you can determine who, and how much an individual can be credited, or penalized with Vibratile Credits. This in-which depends on the individual's actions. These actions vary between Good, and Bad Vibes. This flexibility allows developers to create sophisticated, and nuanced Vibratile Credit mechanisms that can adapt to various scenarios, and user's behavior.
 
 **Base Contract:**
 A Base Contract will be provided as a foundation. Developers can build upon this base to create customized Vibratile Credit Logic. The key requirement is to implement two essential functions. The one returns the class description.
-The other is also simple. It takes perameters of and address and amount. This represents an address in the trade (From, To, Caller, or Sender) and the trade ammount. What you do with this info is up to you but you must return a vibe to be charged to the user and the amount that you did not use in the transaction.
-You must return an amount less then the original transaction amount, and at least 1/4 of the original amount of the trade. This will allow you to create additional rewards, liquidity additions, as long as it meets those requirements. 
+The other is also simple. It takes a reading of parameters, such as the address and the amount. This represents an address in the trade (From, To, Caller, or Sender) and the trade ammount. What you do with this information is up to you, but you must return a Vibe to be charged to the user, and the amount that you did not use in the transaction.
+You must return an amount less then the original transaction amount, and at least 1/4 of the original amount of the trade. This will allow you to create additional rewards and liquidity additions. You will only be able to create these rewards as long as it meets those requirements. 
 
-**Essential Base Class**
-To integrate with the Dynamic Vibratile Credit System, your contract must inharet the BaseClass contract. Apon completion we will test out the contract before pushing it live if voted in. 
+**Essential-Base Class**
+To integrate with the Dynamic Vibratile Credit System, your contract must inherit the BaseClass contract. Upon completion, we will test out the contract before pushing it live. It will only be pushed to the public if voted in. 
 
 ```solidity 
 // SPDX-License-Identifier: Sharia
@@ -75,7 +75,7 @@ import "./IVibeCalculator.sol";
 
 /**
  * @title BaseClass
- * @dev This is an abstract base class contract that includes basic functionalities for user activation and class basis management.
+ * @dev This is an abstract Base Class contract that includes basic functionalities for user activation and Class Basis Management.
  */
 abstract contract VibeBase is IVibeCalculator {
    
@@ -104,7 +104,7 @@ abstract contract VibeBase is IVibeCalculator {
 ```
 
 
-Here is a full example of a vibe class. This one randomly generates a vibe. 
+Here is a full example of a Vibe Class. This one randomly generates a Vibe. 
 
 ```solidity
 // SPDX-License-Identifier: Sharia
@@ -114,16 +114,16 @@ import "./IVibeCalculator.sol";
 import "./VibeBase.sol";
 /**
  * @title RandomizedVibeCalculator
- * @dev A vibe calculator that applies a random vibe rate within a specified range.
+ * @dev A Vibe calculator that applies a random Vibe Rate within a specified range.
  */
 contract RandomizedVibeCalculator is VibeBase {
     int public immutable minRateBasisPoints;
     int public immutable maxRateBasisPoints;
     string public Description;
     /**
-     * @dev Constructor to set the range for the random vibe rate.
-     * @param _minRateBasisPoints The minimum vibe rate in basis points.
-     * @param _maxRateBasisPoints The maximum vibe rate in basis points.
+     * @dev Constructor to set the range for the random Vibe Rate.
+     * @param _minRateBasisPoints The minimum Vibe Rate in Basis Points.
+     * @param _maxRateBasisPoints The maximum Vibe Rate in Basis Points.
      */
     constructor(int _minRateBasisPoints, int _maxRateBasisPoints, string memory _description
     )  VibeBase(_description) {
@@ -141,11 +141,11 @@ contract RandomizedVibeCalculator is VibeBase {
 ```
 
 ## Vibe Registry
-The vibe classes are all stored inside of the vibe Registry contract. That is the main logic hub behind the dynamic vibe system. To keep things simple, a transaction, either transfer or transferFrom has on normal a few addresses that are included in the transaction.
-We break them down like this, to, from, caller (tx.origin), and sender (msg.sender) as well as the amount being transfered. You get to decide witch address your vibes will be associated or triggered on. For rewarding LP traders we will use the to and from addresses because that is where the token will be transfering to and from durring a normal trade. 
-Now there are also 2 other conditions, an active (is it activated), and a process condition that you need to keep in mind. The process simple means that the class will be reprocessed on every transaction, whereass normaly it triggers once and is saved to the address. This helps save on gas. But if it needs to be ran everytime like lets say you are checking for holding or balances. 
+The Vibe Classes are all stored inside of the vibe Registry contract. That is the main logic hub behind the Dynamic Vibe System. To keep things simple, a transaction, either transfer or transferFrom normally have a few addresses that are included in the transaction.
+We break them down like this, To, From, Caller (tx.origin), and Sender (msg.sender) as well as the amount being transfered. You get to decide which address your Vibes will be associated, or triggered on. For rewarding LP traders, we will use the To and From addresses, because that is where the token will be transfering To and From during a normal trade. 
+Now, there are also two other conditions, an active (is it activated), and a process condition that you need to keep in mind. This simple process means that the Class will be reprocessed on every transaction, whereas normally it triggers once, and is saved to the address. This helps save on gas, but only if it needs to be ran everytime, like let's say you are checking for holding or balances. 
 
-Here is the main function of the Regestry contract that calculates the vibes per user on a transaction. There is also a bonus rewards modul as well.
+Here is the main function of the Registry contract that calculates the Vibes per user on a transaction, there is also a bonus rewards module as well:
 
 ``` solidity
 
@@ -207,16 +207,16 @@ Here is the main function of the Regestry contract that calculates the vibes per
         calculateRewards(to, from, _caller, sender, amount, sumVibes);
         ```
 
-        As you can now tell, this system is robust and very modular. This will allow for a community to run itself and have a constant way of burning the main token. 
+        As you can now tell, this system is robust and very modular. This will allow for a community to run itself, and have a constant way of burning the main token. 
   </TabsContent>
 </Tabs>
 
 ### Vibratile Creditation Strategy
 ## Dynamic Vibratile Creditation Goals:
-The primary goal of Dynamic Vibratile Creditation is to maintain the stability and peg of the Vibratile Token. By Vibratile Crediting Bad Actors heavily (up to 80%) and burning over 70% of all collected Vibratile Credits, the system can reduce token supply and help regain the target price.
+The primary goal of Dynamic Vibratile Creditation, is to maintain the stability and peg of the Vibratile token. By Vibratile Crediting Bad Actors heavily (up to 80%) and burning over 70% of all collected Vibratile Credits, the system can reduce token supply and help regain the target price.
 
 ## Burning Mechanism:
-Burning tokens immediately reduces the circulating supply, contributing to the contraction mechanism described earlier. This system allows for endless possibilities, encouraging community contributions to devise new ways to enhance the model and achieve the desired economic outcomes.
+Burning tokens immediately reduces the circulating supply, contributing to the contraction mechanism described earlier. This system allows for endless possibilities, encouraging community contributions to devise new ways to enhance the model, and achieve the desired economic outcomes.
 
 ## Conclusion
-Dynamic Vibratile Creditation is a crucial component of the Vibratile Token Ecosystem, ensuring that the system remains adaptive, fair, and community-driven. By leveraging the collective power of the community and innovative Vibratile Credit mechanisms, Vibratile Tokens like XUSD can achieve stability and growth in the decentralized finance space.
+Dynamic Vibratile Creditation is a crucial component of the Vibratile token ecosystem, ensuring that the system remains adaptive, fair, and community-driven. By leveraging the collective power of the community and innovative Vibratile Credit mechanisms, Vibratile tokens like XUSD can achieve stability, and growth in the decentralized finance space.
