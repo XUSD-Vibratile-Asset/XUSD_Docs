@@ -1,22 +1,11 @@
 ---
 title: Praetorship
 
-description: XUSD Access Control 
+description: Vibe Votes and each assigned rank
 ---
 
-We have an access control system in place, which is on the contract level. This system grants users permissions, which allows them to use additional functions. 
-While the first levels are relatively easy to obtain, the more higher ones are more team-based with permissions that are generally moreover security-based. 
+Each rank will have a different weight when it comes to voting. This is to keep in-line with a DeFi Republic. As we get larger, it is more important and appropriate to delegate our votes to elected officials, so we can mimic that here with the rank weights.
 
-  ```solidity {7} showLineNumbers
-    enum Rank {
-        PRINCEPS,         // 0
-        GLADIATOR,        // 1
-        LEGATUS,          // 2
-        SENATOR,          // 3
-        CONSUL,           // 4
-        PRAETORMAXIMUS    // 5 (Highest rank)
-    }
-````
 ## PRINCEPS
 The PRINCEPS are the base-level where every user starts. This rank is where a user will begin their journey inside the XUSD Vibratile Asset ecosystem.
 ## GLADIATOR
@@ -32,19 +21,21 @@ The CONSUL rank is reserved for the contracts in the system. This rank controls 
 The PRAETORMAXIMUS is the Dev MultiSig deployer wallet. This role is in no way, meant to be a supreme controller. This is more for a developmental-type access to contracts. Once Bootstrapping is over, we will have the ability to revoke these permissions.
 It is more here for setup, and for safety. All while the protocol is still new. 
 
+## XUSD Access Control 
 
-## Vibe Votes and each assigned rank
-Each rank will have a different weight when it comes to voting. This is to keep in-line with a DeFi Republic. As we get larger, it is more important and appropriate to delegate our votes to elected officials, so we can mimic that here with the rank weights.
+  ```solidity {7} showLineNumbers
+    enum Rank {
+        PRINCEPS,         // 0
+        GLADIATOR,        // 1
+        LEGATUS,          // 2
+        SENATOR,          // 3
+        CONSUL,           // 4
+        PRAETORMAXIMUS    // 5 (Highest rank)
+    }
+````
 
-**PRINCEPS = 0**
-
-**GLADIATOR = 1**
-
-**LEGATUS = 2**
-
-**SENATOR = 3**
-
-**PRAETORMAXIMUS = 5 (Highest rank)**
+We have an access control system in place, which is on the contract level. This system grants users permissions, which allows them to use additional functions. 
+While the first levels are relatively easy to obtain, the more higher ones are more team-based with permissions that are generally moreover security-based. 
 
 Even though the higest ranks can just make the Vibe happen, it is not encouraged to do so. Those are for times of emergency.
 You can gain these ranks, but you will still need a VibePass to vote, and collect on siegniorage. 
