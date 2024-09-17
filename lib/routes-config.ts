@@ -54,9 +54,9 @@ export const ROUTES = [
 
   {
     title: "Praetorship",
-    href: "Praetorship",
+    href: "PraetorshipDev",
     items: [
-      { title: "Praetorship", href: "/Praetorship" },
+      { title: "Praetorship", href: "/PraetorshipDev" },
 
 
       
