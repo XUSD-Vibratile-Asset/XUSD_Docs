@@ -34,7 +34,7 @@ export const ROUTES = [
     title: "XUSD VibePass",
     href: "CreditReport",
     items: [
-      { title: "Overview", href: "/Vibe Overview" },
+      { title: "Overview", href: "/VibeOverview" },
 
       { title: "Buy", href: "/Obtain" },
       
