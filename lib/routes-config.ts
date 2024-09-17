@@ -22,7 +22,7 @@ export const ROUTES = [
     title: "Dynamic Vibratile Credit",
     href: "DynamicVibe",
     items: [
-      { title: "Overview", href: "/VibeOverview" },
+      { title: "Overview", href: "/VibePassOverview" },
       { title: "Vibes", href: "/Vibes" },
       { title: "Vibe Classes", href: "/Classes" },
       { title: "Manual", href: "/Manual" },   
@@ -34,7 +34,7 @@ export const ROUTES = [
     title: "XUSD VibePass",
     href: "CreditReport",
     items: [
-      { title: "Overview", href: "/VibeOverview" },
+      { title: "Overview", href: "/VibePassOverview" },
 
       { title: "Buy", href: "/Obtain" },
       
