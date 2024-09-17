@@ -5,7 +5,7 @@ export const ROUTES = [
     title: "XUSD EcoStable System",
     href: "XUSD-Start",
     items: [
-      { title: "XUSD", href: "/What Is XUSD" },
+      { title: "XUSD", href: "/WhatIsXUSD" },
       { title: "QuickStart", href: "/QuickStart" },
       { title: "PulseChain", href: "/PulseChain" },
     ],
