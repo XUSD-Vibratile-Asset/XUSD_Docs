@@ -6,7 +6,7 @@ export const ROUTES = [
     href: "XUSD-Start",
     items: [
       { title: "XUSD", href: "/What-Is-XUSD" },
-      { title: "QuickStart", href: "/QuickStart" },
+      { title: "QuickStart", href: "/Quick-Start" },
       { title: "PulseChain", href: "/PulseChain" },
     ],
   },
