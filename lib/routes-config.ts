@@ -6,7 +6,7 @@ export const ROUTES = [
     href: "XUSD-Start",
     items: [
       { title: "XUSD", href: "/What Is XUSD" },
-      { title: "Quick Start", href: "/Quick Start" },
+      { title: "QuickStart", href: "/QuickStart" },
       { title: "PulseChain", href: "/PulseChain" },
     ],
   },
@@ -27,7 +27,7 @@ export const ROUTES = [
       { title: "Vibe Classes", href: "/Classes" },
       { title: "Manual", href: "/Manual" },   
  
-      { title: "Dev Resources", href: "/Vibe Dev" },
+      { title: "Dev Resources", href: "/VibeDev" },
     ],
   },
   {
