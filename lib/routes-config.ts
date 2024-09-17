@@ -14,27 +14,27 @@ export const ROUTES = [
     title: "Launch Stages",
     href: "Launch",
     items: [
-      { title: "Overview", href: "/LaunchOverview" },
+      { title: "Overview", href: "/Launch-Overview" },
       { title: "Genesis", href: "/Genesis" },
     ],
   },
   {
     title: "Dynamic Vibratile Credit",
-    href: "DynamicVibe",
+    href: "Dynamic-Vibe",
     items: [
-      { title: "Overview", href: "/VibeOverview" },
+      { title: "Overview", href: "/Vibe-Overview" },
       { title: "Vibes", href: "/Vibes" },
       { title: "Vibe Classes", href: "/Classes" },
       { title: "Manual", href: "/Manual" },   
  
-      { title: "Dev Resources", href: "/VibeDev" },
+      { title: "Dev Resources", href: "/Vibe-Dev" },
     ],
   },
   {
     title: "XUSD VibePass",
-    href: "CreditReport",
+    href: "Credit-Report",
     items: [
-      { title: "Overview", href: "/VibeOverview" },
+      { title: "Overview", href: "/Vibe-Overview" },
 
       { title: "Buy", href: "/Obtain" },
       
@@ -44,7 +44,7 @@ export const ROUTES = [
     title: "When Over Peg",
     href: "Peg",
     items: [
-      { title: "Peg Control", href: "/PegControl" },
+      { title: "Peg Control", href: "/Peg-Control" },
 
 
       
@@ -67,7 +67,7 @@ export const ROUTES = [
     title: "Community Contribution",
     href: "Community",
     items: [
-      { title: "Community Rewards", href: "/CommunityRewards" },
+      { title: "Community Rewards", href: "/Community-Rewards" },
 
 
       
@@ -84,9 +84,9 @@ export const ROUTES = [
   // }, 
   {
     title: "Telegram Bots",
-    href: "TelegramBots",
+    href: "Telegram-Bots",
     items: [
-      { title: "Telegram Notifications", href: "/TelegramBots" },
+      { title: "Telegram Notifications", href: "/Telegram-Bots" },
   
       
     ],
