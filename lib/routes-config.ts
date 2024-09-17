@@ -3,10 +3,10 @@ export const ROUTES = [
 
   {
     title: "XUSD EcoStable System",
-    href: "XUSD-Start",
+    href: "XUSDStart",
     items: [
-      { title: "XUSD", href: "/What-Is-XUSD" },
-      { title: "QuickStart", href: "/Quick-Start" },
+      { title: "XUSD", href: "/WhatIsXUSD" },
+      { title: "QuickStart", href: "/QuickStart" },
       { title: "PulseChain", href: "/PulseChain" },
     ],
   },
@@ -14,27 +14,27 @@ export const ROUTES = [
     title: "Launch Stages",
     href: "Launch",
     items: [
-      { title: "Overview", href: "/Launch-Overview" },
+      { title: "Overview", href: "/LaunchOverview" },
       { title: "Genesis", href: "/Genesis" },
     ],
   },
   {
     title: "Dynamic Vibratile Credit",
-    href: "Dynamic-Vibe",
+    href: "DynamicVibe",
     items: [
-      { title: "Overview", href: "/Vibe-Overview" },
+      { title: "Overview", href: "/VibeOverview" },
       { title: "Vibes", href: "/Vibes" },
       { title: "Vibe Classes", href: "/Classes" },
       { title: "Manual", href: "/Manual" },   
  
-      { title: "Dev Resources", href: "/Vibe-Dev" },
+      { title: "Dev Resources", href: "/VibeDev" },
     ],
   },
   {
     title: "XUSD VibePass",
-    href: "Credit-Report",
+    href: "CreditReport",
     items: [
-      { title: "Overview", href: "/Vibe-Overview" },
+      { title: "Overview", href: "/VibeOverview" },
 
       { title: "Buy", href: "/Obtain" },
       
@@ -44,7 +44,7 @@ export const ROUTES = [
     title: "When Over Peg",
     href: "Peg",
     items: [
-      { title: "Peg Control", href: "/Peg-Control" },
+      { title: "Peg Control", href: "/PegControl" },
 
 
       
@@ -67,7 +67,7 @@ export const ROUTES = [
     title: "Community Contribution",
     href: "Community",
     items: [
-      { title: "Community Rewards", href: "/Community-Rewards" },
+      { title: "Community Rewards", href: "/CommunityRewards" },
 
 
       
@@ -84,9 +84,9 @@ export const ROUTES = [
   // }, 
   {
     title: "Telegram Bots",
-    href: "Telegram-Bots",
+    href: "TelegramBots",
     items: [
-      { title: "Telegram Notifications", href: "/Telegram-Bots" },
+      { title: "Telegram Notifications", href: "/TelegramBots" },
   
       
     ],
