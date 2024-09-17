@@ -3,48 +3,48 @@ export const ROUTES = [
 
   {
     title: "XUSD EcoStable System",
-    href: "xusd-start",
+    href: "XUSD-Start",
     items: [
-      { title: "XUSD", href: "/whatisxusd" },
-      { title: "Quick Start", href: "/quickStart" },
-      { title: "PulseChain", href: "/pulsechain" },
+      { title: "XUSD", href: "/What Is XUSD" },
+      { title: "Quick Start", href: "/Quick Start" },
+      { title: "PulseChain", href: "/PulseChain" },
     ],
   },
   {
     title: "Launch Stages",
-    href: "launch",
+    href: "Launch",
     items: [
-      { title: "Overview", href: "/launchOverview" },
-      { title: "Genesis", href: "/genesis" },
+      { title: "Overview", href: "/Launch Overview" },
+      { title: "Genesis", href: "/Genesis" },
     ],
   },
   {
     title: "Dynamic Vibratile Credit",
-    href: "dynamicVibe",
+    href: "DynamicVibe",
     items: [
-      { title: "Overview", href: "/vibeoverview" },
-      { title: "Vibes", href: "/vibes" },
-      { title: "Vibe Classes", href: "/classes" },
-      { title: "Manual", href: "/manual" },   
+      { title: "Overview", href: "/Vibe Overview" },
+      { title: "Vibes", href: "/Vibes" },
+      { title: "Vibe Classes", href: "/Classes" },
+      { title: "Manual", href: "/Manual" },   
  
-      { title: "Dev Resources", href: "/vibedev" },
+      { title: "Dev Resources", href: "/Vibe Dev" },
     ],
   },
   {
     title: "XUSD VibePass",
-    href: "creditreport",
+    href: "CreditReport",
     items: [
-      { title: "Overview", href: "/litoverview" },
+      { title: "Overview", href: "/Vibe Overview" },
 
-      { title: "Buy", href: "/obtain" },
+      { title: "Buy", href: "/Obtain" },
       
     ],
   },
   {
     title: "When Over Peg",
-    href: "peg",
+    href: "Peg",
     items: [
-      { title: "Peg Control", href: "/pegcontrol" },
+      { title: "Peg Control", href: "/Peg Control" },
 
 
       
@@ -54,9 +54,9 @@ export const ROUTES = [
 
   {
     title: "Praetorship",
-    href: "praetorship",
+    href: "Praetorship",
     items: [
-      { title: "Praetorshipl", href: "/praetorship" },
+      { title: "Praetorship", href: "/Praetorship" },
 
 
       
@@ -65,9 +65,9 @@ export const ROUTES = [
 
   {
     title: "Community Contribution",
-    href: "community",
+    href: "Community",
     items: [
-      { title: "Community Rewards", href: "/communityrewards" },
+      { title: "Community Rewards", href: "/Community Rewards" },
 
 
       
@@ -84,9 +84,9 @@ export const ROUTES = [
   // }, 
   {
     title: "Telegram Bots",
-    href: "tgbots",
+    href: "TelegramBots",
     items: [
-      { title: "Telegram Notifications", href: "/tgbots" },
+      { title: "Telegram Notifications", href: "/Telegram Bots" },
   
       
     ],
