@@ -20,9 +20,9 @@ export const ROUTES = [
   },
   {
     title: "Dynamic Vibratile Credit",
-    href: "DynamicVibe",
+    href: "DynamicVibeOverview",
     items: [
-      { title: "Overview", href: "/VibePassOverview" },
+      { title: "Overview", href: "/DynamicVibeOverview" },
       { title: "Vibes", href: "/Vibes" },
       { title: "Vibe Classes", href: "/Classes" },
       { title: "Manual", href: "/Manual" },   
