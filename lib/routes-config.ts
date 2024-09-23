@@ -16,7 +16,7 @@ export const ROUTES = [
     items: [
       { title: "Overview", href: "/LaunchOverview" },
       { title: "Genesis", href: "/Genesis" },
-      { title: "Bootstraping", href: "/Bootstraping" },
+      { title: "Bootstrapping", href: "/Bootstrapping" },
     ],
   },
   {
