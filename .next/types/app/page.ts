@@ -1,4 +1,4 @@
-// File: /workspaces/XUSD_Docs/app/page.tsx
+// File: /home/surfacing8671/Desktop/x/XUSD_Docs/app/page.tsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
