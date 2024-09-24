@@ -63,6 +63,17 @@ export const ROUTES = [
       
     ],
   },
+  {
+    title: "Security Audits",
+    href: "SecurityAudits",
+    items: [
+      { title: "Security Audits", href: "/SecurityAudits" },
+
+
+
+  ],
+},
+
 
   {
     title: "Community Contribution",
