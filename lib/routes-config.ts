@@ -59,7 +59,6 @@ export const ROUTES = [
     items: [
       { title: "Praetorship", href: "/PraetorshipDev" },
 
-
       
     ],
   },
@@ -68,7 +67,7 @@ export const ROUTES = [
     href: "SecurityAudits",
     items: [
       { title: "Security Audits", href: "/SecurityAudits" },
-
+      { title: "XUSDMintingProtocol", href: "/XUSDMintingProtocol" },
 
 
   ],
