@@ -63,13 +63,13 @@ export const ROUTES = [
     ],
   },
   {
-    title: "Security Audits",
-    href: "SecurityAudits",
+    title: "XUSD Security Audits",
+    href: "XUSDSecurityAudits",
     items: [
-      { title: "Security Audits", href: "/SecurityAudits" },
-      { title: "XUSDMintingProtocol", href: "/XUSDMintingProtocol" },
+      { title: "Security Audits", href: "/XUSDSecurityAudits" },
+      { title: "XUSD Minting Protocol", href: "/XUSDMintingProtocol" },
 
-
+      
   ],
 },
 
