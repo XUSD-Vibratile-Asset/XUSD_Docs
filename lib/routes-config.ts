@@ -17,13 +17,19 @@ export const ROUTES = [
       { title: "Overview", href: "/LaunchOverview" },
       { title: "Genesis", href: "/Genesis" },
       { title: "Bootstrapping", href: "/Bootstrapping" },
+
+
     ],
   },
   {
-    title: "The XUSD Roadmap",
-    href: "XUSDRoadmap",
+
+
+    title: "XUSD Roadmap",
+    href: "Roadmap",
     items: [
       { title: "The XUSD Roadmap", href: "/XUSDRoadmap" },
+
+
     ],
   },
   {
