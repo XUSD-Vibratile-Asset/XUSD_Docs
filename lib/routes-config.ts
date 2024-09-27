@@ -38,7 +38,7 @@ export const ROUTES = [
       { title: "Overview", href: "/DynamicVibeOverview" },
       { title: "Vibes", href: "/Vibes" },
       { title: "Vibe Classes", href: "/Classes" },
-      { title: "Manual", href: "/Manual" },   
+      { title: "Manual", href: "/Manual" },
       { title: "Vibescore Evaluation", href: "/Vibescore" },
       { title: "Dev Resources", href: "/VibeDev" },
     ],
@@ -61,7 +61,7 @@ export const ROUTES = [
       { title: "Peg Control", href: "/PegControl" },
 
 
-      
+
     ],
   },
 
@@ -72,7 +72,7 @@ export const ROUTES = [
     items: [
       { title: "Praetorship", href: "/PraetorshipDev" },
 
-      
+
     ],
   },
   {
@@ -82,7 +82,7 @@ export const ROUTES = [
       { title: "Security Audits", href: "/XUSDSecurityAudits" },
       { title: "XUSD Minting Protocol", href: "/XUSDMintingProtocol" },
 
-      
+
   ],
 },
 
@@ -93,7 +93,7 @@ export const ROUTES = [
     items: [
       { title: "Community Rewards", href: "/CommunityRewards" },
 
-      
+
     ],
   },
   // {
@@ -102,7 +102,7 @@ export const ROUTES = [
   //   items: [
   //     { title: "Are you worthy?", href: "/startking" },
   //     { title: "Seigniorage", href: "/seigniorage" },
-      
+
   //   ],
   // }, 
   {
@@ -110,11 +110,11 @@ export const ROUTES = [
     href: "TelegramBots",
     items: [
       { title: "Telegram Notifications", href: "/TelegramBots" },
-  
-      
+
+
     ],
   }, 
-  
+
 ];
 
 export const page_routes = ROUTES.map(({ href, items }) => {
