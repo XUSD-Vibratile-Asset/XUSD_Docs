@@ -20,6 +20,18 @@ export const ROUTES = [
     ],
   },
   {
+
+    title: "Roadmap",
+    href: "XUSDRoadmap",
+    items: [
+      { title: "The XUSD Roadmap", href: "/Roadmap" },
+
+
+    ],
+  },
+  {
+
+
     title: "Dynamic Vibratile Credit",
     href: "DynamicVibeOverview",
     items: [
@@ -27,7 +39,7 @@ export const ROUTES = [
       { title: "Vibes", href: "/Vibes" },
       { title: "Vibe Classes", href: "/Classes" },
       { title: "Manual", href: "/Manual" },   
- 
+      { title: "Vibescore Evaluation", href: "/Vibescore" },
       { title: "Dev Resources", href: "/VibeDev" },
     ],
   },
@@ -38,7 +50,8 @@ export const ROUTES = [
       { title: "Overview", href: "/VibePassOverview" },
 
       { title: "Buy", href: "/Obtain" },
-      
+
+
     ],
   },
   {
@@ -79,7 +92,6 @@ export const ROUTES = [
     href: "Community",
     items: [
       { title: "Community Rewards", href: "/CommunityRewards" },
-
 
       
     ],
