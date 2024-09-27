@@ -20,13 +20,10 @@ export const ROUTES = [
     ],
   },
   {
-
-    title: "Roadmap",
+    title: "The XUSD Roadmap",
     href: "XUSDRoadmap",
     items: [
       { title: "The XUSD Roadmap", href: "/XUSDRoadmap" },
-
-
     ],
   },
   {
