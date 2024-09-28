@@ -1,44 +1,75 @@
+# 🛡️ Praetorship Dev
+
+**Description:** *Vibe Votes and Assigned Ranks in the XUSD Ecosystem*
+
+In the XUSD Vibratile Asset ecosystem, different ranks carry varying voting powers. This system ensures that governance aligns with the principles of a decentralized finance (DeFi) republic. As the community grows, delegating votes to elected officials becomes increasingly important. The rank system allows for a balance of power through weight-based voting. Below are the details of each rank:
+
 ---
-title: Praetorship Dev
 
-description: Vibe Votes and Each Assigned Rank
+## 🎖️ Ranks Overview
+
+### 👑 PRINCEPS
+
+The **PRINCEPS** rank is where every user starts. This base-level rank marks the beginning of a user’s journey within the XUSD ecosystem.
+
 ---
 
-Each rank will have a different weight when it comes to voting. This is to keep in-line with a DeFi Republic. As we get larger, it is more important and appropriate to delegate our votes to elected officials, so we can mimic that here with the rank weights. The following ranks are:
+### ⚔️ GLADIATOR
 
-## PRINCEPS
-The PRINCEPS are the base-level where every user starts. This rank is where a user will begin their journey inside the XUSD Vibratile Asset ecosystem.
-## GLADIATOR
-The GLADIATOR is the rank most users will find themselves in. It is necessary to have this rank to purchase a VibePass, and really, it is there to show more of the general activity. To achieve this rank, you will need a Good Vibe of 450. 
-## LEGATUS
-This LEGATUS is reserved for community leaders. You must already be a community leader at the time of Genesis, and we will manually asign you to this rank. There is however, a way to obtain this with your on-chain data. 
-This rank will give you more control on the contracts. This is a trusted position, so it is encouraged to hold them accountable. During Genesis, they will hold the ability to add LP tokens to the list of rewarded LP trades. 
-## SENATOR
-The SENATOR will be the highest position obtainable. You also must be elected to this position. Users who are SENATOR will have the delegated ability to make swift changes such as including the ability to enable, or disable Vibes without the need for a vote. They will need however need at least 2 or 3 SENATOR signatures for the change to be accepted through the MultiSig voting system. This rank will most likely come into existence near the end of Bootstrapping. 
-## CONSUL 
-The CONSUL rank is reserved for the contracts in the system. This rank controls every contract within the XUSD Vibratile Asset ecosystem.
-## PRAETORMAXIMUS
-The PRAETORMAXIMUS is the Dev MultiSig deployer wallet. This role is in no way, meant to be a supreme controller. This is more for a developmental-type access to contracts. Once Bootstrapping is over, we will have the ability to revoke these permissions.
-It is more here for setup, and for safety. All while the protocol is still new. 
+The **GLADIATOR** rank represents the majority of active users. To purchase a **VibePass** and engage in more advanced ecosystem activities, users must reach this rank. Achieving the **GLADIATOR** rank requires a **Good Vibe score of 450**.
 
-## XUSD Access Control System (ACS)
+---
 
-We have an Access Control System in place, which is on the contract level. This system grants users permissions, which allows them to use additional functions. 
-While the first levels are relatively easy to obtain, the more higher ones are more team-based with permissions that are generally moreover security-based. 
+### 🛡️ LEGATUS
 
-Even though the higest ranks can just make the Vibe happen, it is not encouraged to do so. Those are for times of emergency.
-You can gain these ranks, but you will still need a VibePass to vote, and collect on siegniorage. The system goes as:
+The **LEGATUS** rank is reserved for community leaders. These individuals must already hold leadership positions at the time of Genesis and are manually assigned this rank. However, it is possible to achieve **LEGATUS** status based on your on-chain data.
 
-  ```solidity {7} showLineNumbers
-    enum Rank {
-        PRINCEPS,         // 0
-        GLADIATOR,        // 1
-        LEGATUS,          // 2
-        SENATOR,          // 3
-        CONSUL,           // 4
-        PRAETORMAXIMUS    // 5 (Highest rank)
-    }
-````
+- **Special Permissions**: Holders of this rank have greater control over contracts and the ability to add LP tokens to the list of rewarded LP trades. This is a trusted position, and **accountability** is important.
+
+---
+
+### 🏛️ SENATOR
+
+The **SENATOR** is the highest rank obtainable by election. **SENATORS** have delegated authority to make important changes, such as enabling or disabling Vibes, without requiring a general vote.
+
+- **MultiSig Requirement**: Changes made by **SENATORS** require **2 or 3 signatures** from other SENATORS for approval through the MultiSig voting system.
+- This rank is expected to come into effect near the end of the Bootstrapping phase.
+
+---
+
+### ⚙️ CONSUL
+
+The **CONSUL** rank holds control over all contracts within the XUSD Vibratile Asset ecosystem.
+
+---
+
+### 🔑 PRAETORMAXIMUS
+
+The **PRAETORMAXIMUS** rank belongs to the **Dev MultiSig deployer wallet**. This rank is not meant to act as a supreme controller but is focused on development and access to contracts during the initial phases of the protocol.
+
+- Once the Bootstrapping phase concludes, the permissions of the **PRAETORMAXIMUS** rank can be revoked, ensuring safety during the early stages of the protocol’s development.
+
+---
+
+## 🔐 XUSD Access Control System (ACS)
+
+The **Access Control System (ACS)** governs permissions within the XUSD contracts. This system grants certain privileges to users, allowing them to perform additional functions based on their rank. While the lower ranks are easily accessible, the higher ranks come with more responsibilities and security-based permissions.
+
+- **Emergency Use**: Although the highest ranks have the power to trigger a Vibe, such actions are reserved for emergencies and should not be used lightly.
+- **VibePass Requirement**: Regardless of rank, users need a **VibePass** to vote and collect seigniorage.
+
+The ranks and permissions follow the structure below:
+
+```solidity
+enum Rank {
+    PRINCEPS,         // 0
+    GLADIATOR,        // 1
+    LEGATUS,          // 2
+    SENATOR,          // 3
+    CONSUL,           // 4
+    PRAETORMAXIMUS    // 5 (Highest rank)
+}
+
 
 
 
