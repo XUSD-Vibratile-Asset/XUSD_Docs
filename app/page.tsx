@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="flex sm:min-h-[91vh] min-h-[88vh] flex-col items-center justify-center text-center px-2 py-8">
       <Image
-        src="/x.png" // Replace with the actual path to your image
+        src="/logoMain.png" // Replace with the actual path to your image
         alt="Description of the image"
         width={500} // Set the desired width
         height={300} // Set the desired height
