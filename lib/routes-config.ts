@@ -24,6 +24,16 @@ export const ROUTES = [
   {
 
 
+    title: "X Vaults",
+    href: "XVaultsSystem",
+    items: [
+      { title: "Vault", href: "/Vault" },
+      
+    ],
+  },
+  {
+
+
     title: "Dynamic Vibratile Credit",
     href: "DynamicVibeOverview",
     items: [
