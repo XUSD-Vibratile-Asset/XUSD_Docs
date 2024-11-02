@@ -8,7 +8,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "XUSD Documents",
-  metadataBase: new URL("https://docs-xusd.vercel.app/"),
+  metadataBase: new URL("https://docs.x-usd.net/"),
   description:
   "The Comprehensive documents surrounding the innovative XUSD protocol on pulsechain.",
 };
