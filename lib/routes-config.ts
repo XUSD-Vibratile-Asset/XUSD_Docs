@@ -40,9 +40,9 @@ export const ROUTES = [
       { title: "Overview", href: "/DynamicVibeOverview" },
       { title: "Vibes", href: "/Vibes" },
       { title: "Vibe Classes", href: "/Classes" },
-      { title: "Manual", href: "/Manual" },
-      { title: "Vibescore Evaluation", href: "/VibescoreEvaluation" },
-      { title: "Dev Resources", href: "/VibeDev" },
+      // { title: "Manual", href: "/Manual" },
+      // { title: "Vibescore Evaluation", href: "/VibescoreEvaluation" },
+      // { title: "Dev Resources", href: "/VibeDev" },
     ],
   },
   {
