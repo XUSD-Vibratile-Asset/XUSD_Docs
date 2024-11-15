@@ -41,7 +41,7 @@ export const ROUTES = [
       { title: "Vibes", href: "/Vibes" },
       { title: "Vibe Classes", href: "/Classes" },
       // { title: "Manual", href: "/Manual" },
-      // { title: "Vibescore Evaluation", href: "/VibescoreEvaluation" },
+      { title: "Vibescore Evaluation", href: "/VibescoreEvaluation" },
       // { title: "Dev Resources", href: "/VibeDev" },
     ],
   },
@@ -107,15 +107,15 @@ export const ROUTES = [
 
   //   ],
   // }, 
-  {
-    title: "Telegram Bots",
-    href: "TelegramBots",
-    items: [
-      { title: "Telegram Notifications", href: "/TelegramBots" },
+  // {
+  //   title: "Telegram Bots",
+  //   href: "TelegramBots",
+  //   items: [
+  //     { title: "Telegram Notifications", href: "/TelegramBots" },
 
 
-    ],
-  }, 
+  //   ],
+  // }, 
 
 ];
 
